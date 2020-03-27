@@ -1,0 +1,16 @@
+.tasks {
+  max-width: 400px;
+  margin: auto;
+}
+
+.icon {
+  float: right;
+}
+
+.icon-complete {
+  color: green;
+}
+
+.icon-incomplete {
+  color: red;
+}
