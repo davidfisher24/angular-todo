@@ -14,3 +14,7 @@
 .icon-incomplete {
   color: red;
 }
+
+.task-description {
+  font-size: 1.2em;
+}

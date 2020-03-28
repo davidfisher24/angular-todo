@@ -1,4 +1,4 @@
-<div id="app-root">
+<div id="app-root" class="mat-app-background">
 
   <mat-grid-list cols="2" rowHeight = "100px">
     <mat-grid-tile>
@@ -22,7 +22,7 @@
   <div class="tasks" *ngIf="displayedTasks.length > 0">
     <mat-card *ngFor="let task of displayedTasks">
       <mat-card-content>
-        <p>
+        <p class="task-description">
           {{task.description}}
           <mat-icon *ngIf="task.completed" aria-hidden="false" aria-label="icon" class="icon icon-complete">check</mat-icon>
           <mat-icon  *ngIf="!task.completed" aria-hidden="false" aria-label="icon" class="icon icon-incomplete">close</mat-icon>
@@ -30,10 +30,10 @@
 
       </mat-card-content>
       <mat-card-actions>
-        <button mat-button (click)="deleteTask(task)">DELETE</button>
-        <button *ngIf="!task.completed" mat-button (click)="toggleTaskCompleted(task)">COMPLETE</button>
-        <button *ngIf="task.completed" mat-button (click)="toggleTaskCompleted(task)">UNDO</button>
-        <button mat-button (click)="openDialog(task)">UPDATE</button>
+        <button mat-button (click)="deleteTask(task)" color="primary">DELETE</button>
+        <button *ngIf="!task.completed" mat-button (click)="toggleTaskCompleted(task)" color="primary">COMPLETE</button>
+        <button *ngIf="task.completed" mat-button (click)="toggleTaskCompleted(task)" color="primary">UNDO</button>
+        <button mat-button (click)="openDialog(task)" color="primary">UPDATE</button>
       </mat-card-actions>
     </mat-card>
 
